@@ -1,6 +1,6 @@
 // prende l'elemento che mostra gli errori e gli output
-let err = document.getElementById("err")
 let out = document.getElementById("out")
+let err = document.getElementById("err")
 let saluto = document.getElementById("saluto")
 let date = new Date()
 let colori = []
@@ -13,11 +13,10 @@ function elabora() {
     let inTesto = document.getElementById("inTesto")
 
     let number = inNumero.value
-    inNumero.value = "" // reset
 
-    if (number < 0 || number > 255) {
+    if (isNaN(number) || number < 0 || number > 255) {
         err.innerHTML = "Il numero deve essere compreso tra 0 e 255!"
-        return
+        return; // guard clause/early return
     }
 
     if (colori.length === 3) {
@@ -30,10 +29,15 @@ function elabora() {
     out.innerHTML += `<br>I colori inseriti sono ${colori}`
 
     if (colori.length === 3) {
+        if (inTesto.value == null || inTesto.value.toString().trim() === "") {
+            err.innerHTML = "Non hai inserito alcun testo!"
+            return;
+        }
+
         let newColor = `rgb(${colori[0]}, ${colori[1]}, ${colori[2]})`
-        console.log(inTesto.value)
-        out.innerHTML = inTesto.value;
-        out.style.color = newColor;
+        err.innerHTML = ""
+        out.innerHTML = inTesto.value
+        out.style.color = newColor
     }
 }
 

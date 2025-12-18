@@ -1,7 +1,9 @@
-body {
+* {
     background-color: aliceblue;
     font-family: system-ui, -apple-system, sans-serif;
+}
 
+#content {
     margin: auto;
     width: 50%;
     padding: 10px;

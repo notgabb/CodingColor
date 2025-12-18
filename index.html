@@ -6,25 +6,27 @@
     <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div id="header">
-        <h1 id="saluto">Oggi è un bel giorno!</h1>
-    </div>
-    <div id="titolo">
-        <h1>Codici e Colori</h1>
-    </div>
-    <div id="input">
-        <label for="inNumero">Inserisci un:</label>
-        <input id="inNumero" type="number" placeholder="numero">
-        <br>
-        <label for="inTesto">Inserisci un:</label>
-        <input id="inTesto" type="text" placeholder="testo">
-        <br>
-        <button type="button" id="btnElabora" onclick="elabora()">Elabora</button>
-        <button type="button" id="btnCancella" onclick="cancella()">Cancella</button>
-    </div>
-    <div id="output">
-        <p id="out"></p>
-        <p id="error"></p>
+    <div id="content">
+        <div id="header">
+            <h1 id="saluto">Oggi è un bel giorno!</h1>
+        </div>
+        <div id="titolo">
+            <h1>Codici e Colori</h1>
+        </div>
+        <div id="input">
+            <label for="inNumero">Inserisci un:</label>
+            <input id="inNumero" type="number" placeholder="numero">
+            <br>
+            <label for="inTesto">Inserisci un:</label>
+            <input id="inTesto" type="text" placeholder="testo">
+            <br>
+            <button type="button" id="btnElabora" onclick="elabora()">Elabora</button>
+            <button type="button" id="btnCancella" onclick="cancella()">Cancella</button>
+        </div>
+        <div id="output">
+            <p id="out"></p>
+            <p id="err"></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
