@@ -1,20 +1,19 @@
-console.log("Inizializzato!")
+// prende l'elemento che mostra gli errori e gli output
+let err = document.getElementById("err")
+let out = document.getElementById("out")
+let saluto = document.getElementById("saluto")
+let date = new Date()
 let colori = []
+
+saluto.innerText = `Oggi è il ${date}`
 
 function elabora() {
     // prende l'input inNumero e l'elemento saluto
-    let saluto = document.getElementById("saluto")
-    let casella = document.getElementById("inNumero")
-    let number = casella.value
-    casella.value = "" // reset
+    let inNumero = document.getElementById("inNumero")
+    let inTesto = document.getElementById("inTesto")
 
-    let data = new Date()
-    // imposta il valore della field "saluto" come il giorno corrente
-    saluto.innerText = data.getDay()
-
-    // prende l'elemento che mostra gli errori e gli output
-    let err = document.getElementById("err")
-    let out = document.getElementById("out")
+    let number = inNumero.value
+    inNumero.value = "" // reset
 
     if (number < 0 || number > 255) {
         err.innerHTML = "Il numero deve essere compreso tra 0 e 255!"
@@ -32,6 +31,14 @@ function elabora() {
 
     if (colori.length === 3) {
         let newColor = `rgb(${colori[0]}, ${colori[1]}, ${colori[2]})`
+        console.log(inTesto.value)
+        out.innerHTML = inTesto.value;
         out.style.color = newColor;
     }
+}
+
+function cancella() {
+    out.style.color = "rgb(255, 255, 255)"
+    out.innerHTML = ""
+    err.innerHTML = ""
 }

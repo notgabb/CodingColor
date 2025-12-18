@@ -1,0 +1,28 @@
+body {
+    background-color: aliceblue;
+    font-family: system-ui, -apple-system, sans-serif;
+
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+input {
+    margin: 2px;
+    height: 23px;
+    border-radius: 6px;
+    padding-left: 6px;
+    border: 1px solid gray;
+}
+
+button {
+    margin-top: 10px;
+    width: 85px;
+    height: 32px;
+    border-radius: 8px;
+    border: 0px;
+    cursor: pointer;
+    background-color: dodgerblue;
+    color: whitesmoke;
+}
